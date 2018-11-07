@@ -1,0 +1,18 @@
+1. Introduction
+In this tutorial, we’re going to have a look at how we can print even and odd numbers using two threads.
+The goal is to print the numbers in order, while one thread only prints the even numbers and the other thread only prints the odd numbers. We’ll be using the concepts of thread synchronization and inter-thread communication to solve the problem.
+
+2. Threads in Java
+Threads are lightweight processes which can execute concurrently. Concurrent execution of multiple threads can be good regarding performance and CPU utilization since we can work on more than one task at once through different threads running in parallel.
+More information about threads in Java can be found in this article.
+In Java, we can create a thread by either extending the Thread class or by implementing the Runnable interface. In both the cases, we override the run method and write the implementation of the thread in it.
+
+3. Thread Synchronization
+In a multi-threaded environment, it is possible that 2 or more threads are accessing the same resource at around the same time. This can be fatal and lead to erroneous results. To prevent this, we need to make sure that only one thread accesses the resource at a given point of time.
+We can achieve this using thread synchronization.
+In Java, we can mark a method or block as synchronized, which means that only one thread will be able to enter that method or block at a given point of time.
+
+4. Inter-Thread Communication
+Inter-thread communication allows synchronized threads to communicate with each other using a set of methods.
+The methods used are wait, notify, and notifyAll, which are all inherited from the Object class.
+Wait() causes the current thread to wait indefinitely until some other thread calls notify() or notifyAll() on the same object. We can call notify() to waking up threads that are waiting for access to this object’s monitor.
