@@ -3,7 +3,7 @@
 1. Thread
 2. String
 3. Benchmark
-
+4. Math
 
 # Tips and Tricks
 1. run main class from command line <code>mvn exec:java -Dexec.mainClass="com.example.Main"</code>
